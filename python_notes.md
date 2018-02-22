@@ -17,6 +17,7 @@ List
 
 ```
 l_without_num = l[:k] + l[(k + 1):]
+del l[i]
 ```
 
 
@@ -88,4 +89,18 @@ a or b
 # 5
 ```
 
+Concatenating String
 
+```
+''.join(random.choice(string.ascii_uppercase + string.digits + string.ascii_lowercase) 
+                         for _ in range(self.code_len))
+```
+
+sorting
+
+```
+a = [1,5,3,6]
+a.sort()
+a.sort(reverse = True)
+sorted(a)
+```
