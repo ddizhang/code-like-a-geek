@@ -105,7 +105,7 @@ class BinarySearchTree:
 				node_to_del.parent.rightChild = node_to_del_child
 				node_to_del_child.parent = node_to_del.parent
 
-		# if it has both children: find the leftmost child
+		# if it has both children: find the leftmost right child
 		if node_to_del.has_both_children():
 
 			successor = node_to_del.leftChild
