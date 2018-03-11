@@ -39,6 +39,7 @@ class Solution(object):
                     
     # above naive approach can be improved by reducing if cases.
     # when there's only one list left, simply paste all of it to the end of result list
+    # this is not merging, but creating a new list 
     def mergeTwoLists2(self, l1, l2):
         """
         :type l1: ListNode
@@ -50,6 +51,7 @@ class Solution(object):
         root = curr = ListNode(0)
 
         while node1 and node2:
+
             if node1.val < node2.val:
                 curr.next = ListNode(node1.val)
                 node1 = node1.next

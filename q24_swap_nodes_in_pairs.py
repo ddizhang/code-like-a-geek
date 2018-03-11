@@ -16,6 +16,9 @@ class Solution(object):
         if not curr:
             return head
         
+        # this is modifying the value in the list!
+        # to swap the nodes themselves: use two pointers. One at previous node and one at current node. 
+        # switch current and current.next
         while curr.next:
             #odd position
             if i%2:

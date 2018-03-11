@@ -103,4 +103,21 @@ a = [1,5,3,6]
 a.sort()
 a.sort(reverse = True)
 sorted(a)
+
+intervals.sort(key=lambda x: x.start)  #each item in intervals list is an object with an attribute called 'start'
+```
+
+
+heap
+
+```
+heapq.heappush(heap, num)
+heapq.heappop(heap)
+heapq.heapify(heap)
+```
+
+contigency table
+
+```
+collections.Counter(tasks)
 ```

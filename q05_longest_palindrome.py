@@ -68,7 +68,11 @@ class Solution(object):
 
     
     def palindromeAroundCenter(l, r, s):
-        
+        '''
+        l: left index
+        r: right index
+        s: string
+        '''
         if s[l] != s[r]:
             return s[l]
         
