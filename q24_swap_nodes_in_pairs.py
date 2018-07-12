@@ -16,9 +16,6 @@ class Solution(object):
         if not curr:
             return head
         
-        # this is modifying the value in the list!
-        # to swap the nodes themselves: use two pointers. One at previous node and one at current node. 
-        # switch current and current.next
         while curr.next:
             #odd position
             if i%2:
@@ -32,7 +29,8 @@ class Solution(object):
     
     
     # simpler solution: only passing odd positions
-    def swapPairs(self, head):
+    # I don't understand it now..
+    def swapPairs1(self, head):
         """
         :type head: ListNode
         :rtype: ListNode
@@ -53,3 +51,27 @@ class Solution(object):
                 
         return head
     
+
+    # this is the correct one- not reseting value but swap nodes
+    def swapPairs(self, head):
+        
+        new_head = ListNode(0)
+        new_head.next = head
+        
+        aprev = new_head
+        a = head
+        
+        while a and a.next:
+            print('a.val =' + str(a.val))
+            b = a.next
+            bnext = b.next
+            #change order
+            aprev.next = b
+            b.next = a
+            a.next = bnext
+            
+            aprev = a
+            if a.next:
+                a = a.next
+            
+        return new_head.next

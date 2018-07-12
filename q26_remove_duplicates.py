@@ -28,4 +28,22 @@ class Solution(object):
         return j+1
         
                 
+    def removeDuplicates(self, nums):
+        
+        i, j = 0, 0
+        if not nums:
+            return 0
+        
+        while j < len(nums):
             
+            # if equal: move right pointer
+            if nums[i] == nums[j]:
+                j += 1
+            # if not equal: move left ptr, match number, move right ptr
+            else:
+                i += 1
+                if i < len(nums):
+                    nums[i] = nums[j]
+                j += 1
+        
+        return i+1

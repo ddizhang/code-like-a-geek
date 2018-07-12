@@ -121,3 +121,12 @@ contigency table
 ```
 collections.Counter(tasks)
 ```
+
+
+random
+
+```
+random.choice(string.ascii_uppercase + string.digits)
+random.randint()
+random.random() #randomn number between 0 and 1
+```

@@ -36,4 +36,41 @@ class Solution(object):
         return j+1
         
                 
+    # this one works            
+    def removeDuplicates(self, nums):
+        
+        i, j, rep = 0, 1, 0
+        
+        if not nums:
+            return 0
+        
+        while j < len(nums):
             
+            # if equal but no rep: 
+            # left ptr move right, swap with right ptr, rep = 1
+            if nums[i] == nums[j] and rep == 0:
+                i += 1
+                if i < len(nums):
+                    temp = nums[i]
+                    nums[i] = nums[j]
+                    nums[j] = temp
+                j += 1
+                rep += 1
+            
+            # if equal and rep:
+            # move right ptr
+            elif nums[i] == nums[j] and rep > 0:
+                j += 1
+                
+            # if not equal
+            # left ptr move right, swap with right ptr, reset rep = 0
+            else: # nums[i] != nums[j]
+                i += 1
+                if i < len(nums):
+                    temp = nums[i]
+                    nums[i] = nums[j]
+                    nums[j] = temp
+                j += 1
+                rep = 0
+        
+        return i+1
